@@ -16,8 +16,12 @@ document.addEventListener("touchstart", function(evento){
 			coche.x = ancho + 350;
 			nivel.muerto = false;
 			dron.x = ancho + 4000;
-			nivel.marcador=0;
-
+			if(nivel.marcador > nivel.high){
+				nivel.high=nivel.marcador;
+				nivel.marcador=0;
+			}else{
+				nivel.marcador=0;
+			}
 		}
 });
 
